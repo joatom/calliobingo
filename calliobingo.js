@@ -23,17 +23,27 @@ for (let i = 1; i <= bagsize; i++) {
 
 
 input.onButtonPressed(Button.A, () => {
-    // Draw a number from bag
-    if (!boardView) {
-        page = 0
-        curNumber = bag.removeAt(Math.random(bag.length))
-        basic.showNumber(curNumber)
-        updateBoard(curNumber)
+    // if still numbers in bag
+    if (bag.length > 0) {
+        // Draw a number from bag
+        if (!boardView) {
+            page = 0
+            curNumber = bag.removeAt(Math.random(bag.length))
+            basic.showNumber(curNumber)
+            updateBoard(curNumber)
+        }
+        // view previous board page
+        else {
+            basic.clearScreen()
+            nextPage(-1)
+            showBoard()
+        }
     }
-    // view previous board page
+    // game over
     else {
-        basic.clearScreen()
-        nextPage(-1)
+        boardView = true
+        showBoard()
+        basic.showString("GAME OVER!")
         showBoard()
     }
 })
@@ -63,7 +73,6 @@ input.onButtonPressed(Button.AB, () => {
         showBoard()
     } else {
         basic.setLedColor(0)
-        basic.showNumber(curNumber)
     }
 })
 
@@ -73,7 +82,7 @@ function updateBoard(curNumber: number) {
     // Page 1: 26 - 50
     // ...
     board.setPixel(((curNumber - 1) % 5) + (floor((curNumber - 1) / pagesize) * 5),
-        floor(((curNumber % pagesize) - 1) / 5), true)
+        floor(((curNumber - 1) % pagesize) / 5), true)
 }
 
 // pagingDir = +1: page to the rigth
@@ -87,7 +96,7 @@ function nextPage(pagingDir: number) {
 
 function showBoard() {
     if (boardView) {
-        board.showImage(page * 25)
+        board.showImage(page * 5)
         switch (page) {
             case 0:
                 basic.setLedColor(Colors.Blue)
