@@ -1,6 +1,12 @@
 # calliobingo
-Bingo game for Calliope Mini
 
+## About
+Bingo game for Calliope Mini
+<p align="left">
+  <img src="calliobingo2.jpg?raw=true" width="400" title="Board view of calliobingo">
+</p>
+
+## How to play
 - press A+B: Toggle View
   - Drawing view: Draw and show a number out of a bag (default 25 numbers).
     - press A: draw Number
@@ -8,3 +14,10 @@ Bingo game for Calliope Mini
   - Board view: Show numbers already being drawn. Left upper corner = 1. Right lower corner 25.
     - press A: Page to next board page (if bag is bigger then 25 numbers). Page 1 (1-25), Page 2 (26-50) ...
     - press B: Page to preceding board page.
+
+## Configuration
+To change the amount of numbers in the bag increase the *bagsize* variable, e.g.
+```js
+let bagsize = 50
+```
+You can increase the bag size up to 100.
