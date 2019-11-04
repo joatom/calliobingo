@@ -86,7 +86,7 @@ function updateBoard(curNumber: number) {
 }
 
 // pagingDir = +1: page to the rigth
-// pagingDir = +1: page to the left
+// pagingDir = -1: page to the left
 function nextPage(pagingDir: number) {
     let totalPages = bagsize / pagesize
     if (totalPages > (page + 1 * pagingDir) && 0 <= (page + 1 * pagingDir)) {
