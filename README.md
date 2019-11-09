@@ -3,7 +3,7 @@
 ## About
 Bingo game for Calliope Mini
 <p align="left">
-  <img src="calliobingo2.jpg?raw=true" width="400" title="Board view of calliobingo">
+  <img src="docs/assets/img/calliobingo2.jpg?raw=true" width="400" title="Board view of calliobingo">
 </p>
 
 ## How to play
