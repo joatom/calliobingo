@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="calliobingo2.jpg?raw=true" width="400" title="Board view of calliobingo">
+</p>
+
 ## How to play
 - press A+B: Toggle View
   - Drawing view: Draw and show a number out of a bag (default 25 numbers).
