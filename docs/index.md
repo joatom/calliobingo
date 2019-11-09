@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="calliobingo2.jpg?raw=true" width="400" title="Board view of calliobingo">
+  <img src="assets/img/calliobingo2.jpg?raw=true" width="400" title="Board view of calliobingo">
 </p>
 
 ## How to play
