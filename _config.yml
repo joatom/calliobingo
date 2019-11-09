@@ -1,1 +1,6 @@
+title: calliobingo
+logo: /calliobingo2.jpg
+description: Bingo game for Calliope Mini
+show_downloads: true
+#google_analytics:
 theme: jekyll-theme-minimal
